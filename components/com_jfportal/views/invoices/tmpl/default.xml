@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="Invoices">
+		<message>Invoices listing page</message>
+	</layout>
+	
+	<fields name="params">
+	
+		<fieldset name="table" label="Table Columns" description="Select which Invoice table columns to display">
+			<field name="show_PayStatus" type="radio" default="1" class="btn-group btn-group-yesno" label="Pay Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_CreditStatus" type="radio" default="0" class="btn-group btn-group-yesno" label="Credit Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_DateCreated" type="radio" default="1" class="btn-group btn-group-yesno" label="Date Created" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_InvoiceTotal" type="radio" default="1" class="btn-group btn-group-yesno" label="Invoice Total" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_InvoiceType" type="radio" default="0" class="btn-group btn-group-yesno" label="Invoice Type" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_ProductSold" type="radio" default="0" class="btn-group btn-group-yesno" label="Product sold" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_PromoCode" type="radio" default="0" class="btn-group btn-group-yesno" label="Promo Code" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_RefundStatus" type="radio" default="1" class="btn-group btn-group-yesno" label="Refund Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_TotalDue" type="radio" default="0" class="btn-group btn-group-yesno" label="Total Due" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_TotalPaid" type="radio" default="0" class="btn-group btn-group-yesno" label="Total Paid" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_actions" type="radio" default="0" class="btn-group btn-group-yesno" label="Show 'Pay' button" description="When applicable (i.e: when an invoice has not been paid), display the pay button" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			
+			<field type="spacer" name="filters_separator" label="&lt;b&gt;Filters and Ordering&lt;/b&gt;" />
+			<field name="show_filters" type="radio" default="1" class="btn-group btn-group-yesno" label="Show filters" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_pagination_limit" type="radio" default="1" class="btn-group btn-group-yesno" label="Show pagination limit" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field type="text" name="DateCreated_format" label="Date Created format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/>
+		</fieldset>
+		
+		<fieldset name="invoice" label="'Invoice Details' Fields" description="Select which fields to display in the Invoice details modal window">
+			<field name="show_details" type="list" default="1" label="Link to details?" description="When enabled, the names of the invoices will be links to the invoice/details view. Turning this option off will no longer link to the details view">
+  				<option value="0">JNO</option>
+  				<option value="1">Modal window</option>
+  				<option value="2">Normal link</option>
+			</field>
+			
+			<field name="show_details_Description" type="radio" default="1" class="btn-group btn-group-yesno" label="Description (Name)" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_PayStatus" type="radio" default="1" class="btn-group btn-group-yesno" label="Pay Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_CreditStatus" type="radio" default="1" class="btn-group btn-group-yesno" label="Credit Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_DateCreated" type="radio" default="1" class="btn-group btn-group-yesno" label="Date Created" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_InvoiceTotal" type="radio" default="1" class="btn-group btn-group-yesno" label="Invoice Total" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_InvoiceType" type="radio" default="0" class="btn-group btn-group-yesno" label="Invoice Type" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_ProductSold" type="radio" default="0" class="btn-group btn-group-yesno" label="Product sold" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_PromoCode" type="radio" default="0" class="btn-group btn-group-yesno" label="Promo Code" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_RefundStatus" type="radio" default="1" class="btn-group btn-group-yesno" label="Refund Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_TotalDue" type="radio" default="0" class="btn-group btn-group-yesno" label="Total Due" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_TotalPaid" type="radio" default="0" class="btn-group btn-group-yesno" label="Total Paid" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			
+			<field name="show_details_actions" type="radio" default="1" class="btn-group btn-group-yesno" label="Show 'Pay' button" description="When applicable (i.e: when an invoice has not been paid), display the pay button" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field type="spacer" name="modal_separator" label="&lt;b&gt;Look &amp; Feel&lt;/b&gt;" />
+			<field name="modal_classname" type="text" label="Modal container classname" description="If you need to override the CSS of the modal container, use a custom classname which will be the classname of the container in the modal. Then you can modify/add-to your site-wide CSS for UI changes without having to override the modal template file" />
+			<field name="modal_width" type="text" default="400" label="Modal width" description="If using the default layout, this is the modal details window width" filter="integer" />
+			<field name="modal_height" type="text" default="400" label="Modal height" description="If using the default layout, this is the modal details window height" filter="integer" />
+		</fieldset>
+		
+	</fields>
+	
+</metadata>

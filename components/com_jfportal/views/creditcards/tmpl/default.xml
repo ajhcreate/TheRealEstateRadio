@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="Credit Cards">
+		<message>Credit Cards listing page</message>
+	</layout>
+	
+	<fields name="params">
+		<fieldset name="table" label="Table Columns" description="Select which Credit Card table columns to display">
+			<field name="show_CardType" type="radio" default="1" class="btn-group btn-group-yesno" label="Card Type" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_Last4" type="radio" default="1" class="btn-group btn-group-yesno" label="Last4" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_Expiration" type="radio" default="1" class="btn-group btn-group-yesno" label="Expiration date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_NameOnCard" type="radio" default="1" class="btn-group btn-group-yesno" label="Name on Card" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_FirstName" type="radio" default="0" class="btn-group btn-group-yesno" label="First Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_LastName" type="radio" default="0" class="btn-group btn-group-yesno" label="Last Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_BillName" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_BillAddress1" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Address 1" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_BillAddress2" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Address 2" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_BillZip" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Zip" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_BillCity" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing City" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_BillState" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing State" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_BillCountry" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Country" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_MaestroIssueNumber" type="radio" default="0" class="btn-group btn-group-yesno" label="Maestro Issue Number" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_PhoneNumber" type="radio" default="0" class="btn-group btn-group-yesno" label="Phone Number" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<!-- 
+			<field name="show_ShipFirstName" type="radio" default="0" class="btn-group btn-group-yesno" label="Ship First Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_ShipLastName" type="radio" default="0" class="btn-group btn-group-yesno" label="Ship Last Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_Shtype="select"ipName" type="radio" default="0" class="btn-group btn-group-yesno" label="Ship Full Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			 -->
+			 
+			<field name="show_StartDate" type="radio" default="0" class="btn-group btn-group-yesno" label="Start Date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			
+			<field name="show_Status" type="radio" default="1" class="btn-group btn-group-yesno" label="Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_Actions" type="radio" default="1" class="btn-group btn-group-yesno" label="Show 'Deactivate' button" description="When applicable (i.e: when a card is valid and CC disabling is allowed), display the 'Deactivate' button" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			
+			
+			<field type="spacer" name="filters_separator" label="&lt;b&gt;Filters and Ordering&lt;/b&gt;" />
+			
+			<field name="show_filter_status" type="radio" default="1" class="btn-group btn-group-yesno" label="Show Status filter" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_pagination_limit" type="radio" default="1" class="btn-group btn-group-yesno" label="Show pagination limit" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field type="text" name="ExpirationDate_format" label="Expiration Date format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/>
+			<field type="text" name="StartDate_format" label="Start Date format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/>
+		</fieldset>
+		
+		<fieldset name="creditcard" label="Creditcard Details Fields" description="Select which fields to display in the CreditCard details page">
+		
+			<field name="show_details" type="radio" default="1" class="btn-group btn-group-yesno" label="Link to details view?" description="When enabled, the types of the creditcards will be links to the CC details view. Turning this option off will no longer link to the details view">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_CardType" type="radio" default="1" class="btn-group btn-group-yesno" label="Card Type" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_Last4" type="radio" default="1" class="btn-group btn-group-yesno" label="Last4" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_cvv2" type="radio" default="0" class="btn-group btn-group-yesno" label="CVV2" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_ExpirationDate" type="radio" default="1" class="btn-group btn-group-yesno" label="Expiration Date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_FirstName" type="radio" default="0" class="btn-group btn-group-yesno" label="First Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_LastName" type="radio" default="0" class="btn-group btn-group-yesno" label="Last Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_NameOnCard" type="radio" default="1" class="btn-group btn-group-yesno" label="Name On Card" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_BillName" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Name" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_BillAddress1" type="radio" default="1" class="btn-group btn-group-yesno" label="Billing Address 1" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_BillAddress2" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Address 2" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_BillZip" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Zip" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_BillCity" type="radio" default="1" class="btn-group btn-group-yesno" label="Billing City" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_BillState" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing State" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_BillCountry" type="radio" default="1" class="btn-group btn-group-yesno" label="Billing Country" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_PhoneNumber" type="radio" default="0" class="btn-group btn-group-yesno" label="Phone Number" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_MaestroIssueNumber" type="radio" default="0" class="btn-group btn-group-yesno" label="Maestro Issue Number" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_details_StartDate" type="radio" default="0" class="btn-group btn-group-yesno" label="Start Date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+		</fieldset>
+		
+	</fields>
+	
+	
+</metadata>

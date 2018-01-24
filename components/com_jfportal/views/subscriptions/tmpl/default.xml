@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<metadata>
+	<layout title="Subscriptions">
+		<message>Subscriptions listing/cancellation page. Please make sure you have configured the back-end 'Subscriptions/CC Management' options before exposing this view</message>
+	</layout>
+	
+	<fields name="params">
+		<fieldset name="table" label="Table Columns" description="Select which subscription table columns to display">
+			<field name="show_Status" type="radio" default="1" class="btn-group btn-group-yesno" label="Status" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_BillingCycle" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Cycle" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_StartDate" type="radio" default="0" class="btn-group btn-group-yesno" label="Start Date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_EndDate" type="radio" default="0" class="btn-group btn-group-yesno" label="End Date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_LastBillDate" type="radio" default="0" class="btn-group btn-group-yesno" label="Last Bill Date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_NextBillDate" type="radio" default="0" class="btn-group btn-group-yesno" label="Next Bill Date" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<!-- 
+			<field name="show_PaidThruDate" type="radio" default="0" class="btn-group btn-group-yesno" label="PaidThruDate" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			 -->
+			<field name="show_BillingAmt" type="radio" default="0" class="btn-group btn-group-yesno" label="Billing Amount" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_CC1" type="radio" default="1" class="btn-group btn-group-yesno" label="Credit Card" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_actions" type="radio" default="1" class="btn-group btn-group-yesno" label="Show 'Cancel' button" description="When applicable (i.e: when the subscription is active and it is allowed to be cancelled), display the 'Cancel Subscription' button">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<!-- 
+			<field name="show_ReasonStopped" type="radio" default="0" class="btn-group btn-group-yesno" label="ReasonStopped" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			 -->
+			
+			
+			<field type="spacer" name="filters_separator" label="&lt;b&gt;Filters and Ordering&lt;/b&gt;" />
+			<field name="show_filter_status" type="radio" default="1" class="btn-group btn-group-yesno" label="Show Status filter" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field name="show_pagination_limit" type="radio" default="1" class="btn-group btn-group-yesno" label="Show pagination limit" >
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			<field type="text" name="StartDate_format" label="Start Date format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/>
+			<field type="text" name="EndDate_format" label="End Date format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/> 
+			<field type="text" name="NextBillDate_format" label="Next Bill Date format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/>
+			<field type="text" name="LastBillDate_format" label="Last Bill Date format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/>
+			<!-- <field type="text" name="PaidThruDate_format" label="Paid through Date format override" description="Change the default (user-configured) date format as per the PHP date() function. Example: 'Y-m-d H:i:s' See http://php.net/manual/en/function.date.php" default=""/> -->
+		</fieldset>
+		
+		<fieldset name="subscription" label="'Subscription Details' Fields" description="Select which Subscription fields to display in the subscription details modal window">
+			<field name="show_details" type="list" default="1" label="Link to details?" description="When enabled, the names of the subscriptions will be links to the subscription/details view. Turning this option off will no longer link to the details view">
+  				<option value="0">JNO</option>
+  				<option value="1">Modal window</option>
+  				<option value="2">Normal link</option>
+			</field>
+			
+			<field name="show_details_ProgramName" type="radio" default="1" class="btn-group btn-group-yesno" label="Program/Subscription Name">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_AutoCharge" type="radio" default="1" class="btn-group btn-group-yesno" label="Autocharge">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_BillingAmt" type="radio" default="1" class="btn-group btn-group-yesno" label="Billing Amount">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_BillingCycle" type="radio" default="1" class="btn-group btn-group-yesno" label="Billing Cycle">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_CC1" type="radio" default="1" class="btn-group btn-group-yesno" label="Credit Card">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_LastBillDate" type="radio" default="1" class="btn-group btn-group-yesno" label="Last Bill Date">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_MaxRetry" type="radio" default="0" class="btn-group btn-group-yesno" label="Maximum charge retries">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_NextBillDate" type="radio" default="1" class="btn-group btn-group-yesno" label="Next Bill Date">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_NumDaysBetweenRetry" type="radio" default="0" class="btn-group btn-group-yesno" label="Number of days between charge retries">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<!-- 
+			<field name="show_details_PaidThruDate" type="radio" default="0" class="btn-group btn-group-yesno" label="Paid Through Date">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			 -->
+			
+			<field name="show_details_StartDate" type="radio" default="1" class="btn-group btn-group-yesno" label="Subscription Start Date">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_EndDate" type="radio" default="1" class="btn-group btn-group-yesno" label="Subscription End Date">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_Status" type="radio" default="1" class="btn-group btn-group-yesno" label="Status">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field name="show_details_Cancel" type="radio" default="1" class="btn-group btn-group-yesno" label="Cancel subscription button">
+  				<option value="1">JYES</option>
+  				<option value="0">JNO</option>
+			</field>
+			
+			<field type="spacer" name="modal_separator" label="&lt;b&gt;Look &amp; Feel&lt;/b&gt;" />
+			<field name="modal_classname" type="text" label="Modal container classname" description="If you need to override the CSS of the modal container, use a custom classname which will be the classname of the container in the modal. Then you can modify/add-to your site-wide CSS for UI changes without having to override the modal template file" />
+			<field name="modal_width" type="text" default="400" label="Modal width" description="If using the default layout, this is the modal details window width" filter="integer" />
+			<field name="modal_height" type="text" default="400" label="Modal height" description="If using the default layout, this is the modal details window height" filter="integer" />
+			
+		</fieldset>
+	</fields>
+	
+	
+</metadata>
