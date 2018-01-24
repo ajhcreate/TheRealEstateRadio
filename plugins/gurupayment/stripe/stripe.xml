@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="gurupayment" method="upgrade">
+	<name>PLG_GURUPAYMENT_STRIPE</name>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>web3box@gmail.com</authorEmail>
+	<authorUrl>https://www.web3box.com/</authorUrl>
+	<creationDate>June 27, 2017</creationDate>
+	<copyright>web3box.com</copyright>
+	<version>1.0.0</version>
+	<description>GURU Payment Plugin - Stripe</description>
+	
+	<files>
+		<filename plugin="stripe">stripe.php</filename>
+		<folder>stripe</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_gurupayment_stripe.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_gurupayment_stripe.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		  		<field name="publishable_key" type="text" default="" label="PLG_PUBLICHABLE_KEY" description="" />
+		  		<field name="secret_key" type="text" default="" label="PLG_SECRET_KEY" description="" />
+		  		<field name="stripe_label" type="text" default="Stripe" label="PLG_NAME" description="" />
+				<field name="plugin_hidname" type="hidden" default="stripe" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

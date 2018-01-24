@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+<name>Realestate</name>
+<creationDate>Creation date</creationDate>
+<author>Jultech</author>
+<authorEmail></authorEmail>
+<authorUrl></authorUrl>
+<copyright>Copyright information</copyright>
+<license>License, for example GNU/GPL</license>
+<version>Version 0.1</version>
+<description>Add realestate gut table to joomla search</description>
+<files>
+   <filename plugin="realestate">realestate.php</filename>
+</files>
+</extension>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="joomfuse" method="upgrade">
+	<name>JoomFuse core Joomla plugin</name>
+	<author>Georgios Ntampitzias &amp; The JoomFuse Team</author>
+	<creationDate>August 11, 2017</creationDate>
+	<copyright>Copyright Zacaw Enterprises Inc. All rights reserved.</copyright>
+	<license>GNU General Public License v3; see LICENSE.txt</license>
+	<authorEmail> zacaw@zacaw.com</authorEmail>
+	<authorUrl>www.joomfuse.com</authorUrl>
+	<version>2.1.225</version>
+	<description>Handles the vanilla Joomla field mapping with infusionsoft contact fields whenever a JoomFuse update event fires</description>
+	<scriptfile>plg_joomfuse_joomla_scriptfile.php</scriptfile>
+	<files>
+		<filename plugin="joomla">joomla.php</filename>
+	</files>
+	<languages>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="allowNewUserEmails" type="radio" class="btn-group btn-group-yesno" default="1" label="Attempt to send registration emails?" description="If you select here 'Yes' the plugin will read the users component configuration and try to send a new-user registration email IF the 'New User Account Activation' is set to 'None'\nSelect 'No' to never send such emails for HTTP-POST generated accounts" >
+					<option value="1">JYes</option>
+					<option value="0">JNo</option>
+				</field>
+			</fieldset>
+
+		</fields>
+	</config>
+	
+</extension>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="content" method="upgrade">
+	<name>plg_content_f90filterpro</name>
+	<author>Function90</author>
+	<creationDate>Oct 2013</creationDate>
+	<copyright>(C) 2013 Fucntion90.com. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>dev.fucntion90@gmail.com</authorEmail>
+	<authorUrl>www.function90.com</authorUrl>
+	<version>1.0.0</version>
+	<description>PLG_CONTENT_F90FILTERPRO_XML_DESCRIPTION</description>
+
+	<files>
+		<filename plugin="f90filterpro">f90filterpro.php</filename>
+		<filename>index.html</filename>
+		<folder>fields</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.plg_content_f90filterpro.ini</language>
+		<language tag="en-GB">en-GB.plg_content_f90filterpro.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+
+			<fieldset name="basic"
+				addfieldpath="/plugins/content/f90filterpro/fields/">
+				<field name="mapping"
+						type="f90filterpro.groups"
+						label=""
+						/>
+			</fieldset>
+
+		</fields>
+	</config>
+</extension>

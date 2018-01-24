@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="editors-xtd" method="upgrade">
+	<name>JoomFuse Shortcodes Button</name>
+	<author>Georgios Ntampitzias &amp; The JoomFuse Team</author>
+	<creationDate>August 11, 2017</creationDate>
+	<copyright>Copyright Zacaw Enterprises Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>zacaw@zacaw.com</authorEmail>
+	<authorUrl>www.joomfuse.com</authorUrl>
+	<version>2.1.225</version>
+	<description>Displays an article-editor button that assists with the usage of the JoomFuse shortcodes</description>
+	<scriptfile>plg_editors-xtd_joomfuse_scriptfile.php</scriptfile>
+	<files>
+		<filename plugin="joomfuse">joomfuse.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

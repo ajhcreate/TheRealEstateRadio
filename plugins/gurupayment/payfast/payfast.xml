@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="gurupayment" method="upgrade">
+	<name>PLG_GURUPAYMENT_PAYFAST</name>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>web3box@gmail.com</authorEmail>
+	<authorUrl>https://www.web3box.com/</authorUrl>
+	<creationDate>September 06, 2017</creationDate>
+	<copyright>web3box.com</copyright>
+	<version>1.0.0</version>
+	<description>GURU Payment Plugin - PayFast</description>
+	
+	<files>
+		<filename plugin="payfast">payfast.php</filename>
+		<folder>payfast</folder>
+	</files>
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_gurupayment_payfast.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_gurupayment_payfast.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+		  		<field name="merchant_id" type="text" default="" label="PLG_MERCHANT_ID" description="" />
+
+		  		<field name="merchant_key" type="text" default="" label="PLG_MERCHANT_KEY" description="" />
+
+		  		<field name="testingMode" class="btn-group" type="radio" default="0" label="Test through Sandbox" description="Only for developers who know what they are doing">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+
+		  		<field name="payfast_label" type="text" default="PayFast" label="PLG_NAME" description="" />
+
+				<field name="plugin_hidname" type="hidden" default="payfast" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
