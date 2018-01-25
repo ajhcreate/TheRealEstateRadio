@@ -1,0 +1,69 @@
+<?php
+defined('_JEXEC') or die;
+function src_f5510e4ac68636f23d20fc07fd458a6f($src_variables){
+$app = $mainframe = JFactory::getApplication();
+$document = $doc = JFactory::getDocument();
+$database = $db = JFactory::getDbo();
+$user = JFactory::getUser();
+$Itemid = $app->input->getInt('Itemid');
+if (is_array($src_variables)) {foreach ($src_variables as $src_key => $src_value) {${$src_key} = $src_value;}}
+///get usergroup
+$user = JFactory::getUser();
+$db     = JFactory::getDBO();
+$authorize = 0;
+
+	foreach($user->groups as $group){
+		$query  = 'SELECT title FROM #__usergroups';
+		$query .= ' WHERE id = ' . $group;
+		$db->setQuery( $query );
+		$utype = $db->loadResult();
+		if($utype=='Inner Circle'){
+				$authorize = 1;	
+		}
+	}
+
+ if($authorize==1){ 
+echo '
+
+
+
+
+ 
+ 
+
+BOOK STUDY CALLS
+ 
+link 
+
+
+
+
+
+
+ 
+ 
+
+WHAT'S YOUR DEAL CALLS
+ 
+link 
+
+
+
+
+
+
+ 
+ 
+
+HOT TOPIC INTERACTIVE CALLS
+ 
+link 
+
+
+
+
+
+'
+ };
+;return get_defined_vars();
+;}

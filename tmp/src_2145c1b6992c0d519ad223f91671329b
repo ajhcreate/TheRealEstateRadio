@@ -1,0 +1,12 @@
+<?php
+defined('_JEXEC') or die;
+function src_2145c1b6992c0d519ad223f91671329b($src_variables){
+$app = $mainframe = JFactory::getApplication();
+$document = $doc = JFactory::getDocument();
+$database = $db = JFactory::getDbo();
+$user = JFactory::getUser();
+$Itemid = $app->input->getInt('Itemid');
+if (is_array($src_variables)) {foreach ($src_variables as $src_key => $src_value) {${$src_key} = $src_value;}}
+};
+;return get_defined_vars();
+;}

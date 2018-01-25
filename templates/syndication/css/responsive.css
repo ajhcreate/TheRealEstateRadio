@@ -1,0 +1,93 @@
+.canvass {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 10px;
+}
+.logo.mobile img {
+    width: 148px;
+}
+.logo.mobile {    
+	width:100%;
+}
+.toolbar-r.mobile {
+    background-image: none;
+    width: 100%;
+}
+.menu-button {
+  background: #062956 none repeat scroll 0 0;
+  cursor: pointer;
+  margin-top: -21px;
+  padding: 14px;
+  text-align: center;
+}
+.icon-menu-3 {
+    color: #fff;
+}
+.menu-button > a {
+    color: #fff;
+}
+.toolbar-r.mobile .nav.menu.user-menu {
+    background: #5059b3 none repeat scroll 0 0;
+    padding: 8px 0;
+    text-align: center;
+}
+.toolbar-r.mobile .user-menu a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 0 11px;
+	text-shadow: 0 0 transparent;
+}
+
+.toolbar-r.mobile .user-menu li::before {
+    color: #717cee;
+    content: "|";
+    display: block;
+    position: absolute;
+    text-align: right;
+}
+.toolbar-r.mobile .user-menu li:first-child::before {
+    content: "";
+}
+.canvass a {
+    font-size: 18px;
+}
+@media screen and (max-width: 767px) {
+.top-wrap {
+    background: #fff none repeat scroll 0 0;
+}
+.nav.menu.user-menu {
+    margin-top: 12px; 
+}	
+.footer-main .nav > li > a::after {
+    content: "|";
+    padding: 5px;
+}
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+}
+
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) {
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : landscape) {
+}

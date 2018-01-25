@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>syndication</name>
+	<version>1.0</version>
+	<creationDate>9/26/2016</creationDate>
+	<author>Cindy Moore</author>
+	<authorEmail>info@mooretechsolutions.com</authorEmail>
+	<copyright>Copyright (C) 2005 - 2016 Moore Tech Solutions, Inc. All rights reserved.</copyright>
+	<description>A Custom Template made by Moore Tech Solutions, Inc.</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>img</folder>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>less</folder>
+	</files>
+	<positions>
+		<position>toolbar-l</position>
+		<position>toolbar-r</position>
+		<position>logo</position>
+		<position>canvass</position>
+		<position>search</position>
+		<position>banner-1</position>
+		<position>banner-2</position>
+		<position>banner-3</position>
+		<position>breadcrumbs</position>
+		<position>debug</position>
+		<position>canvass</position>
+		<position>mobile-top</position>
+		<position>navigation</position>
+		<position>showcase</position>
+		<position>content-bottom</position>
+		<position>content-top</position>
+		<position>right</position>
+		<position>left</position>
+		<position>grid1</position>
+		<position>grid2</position>
+		<position>grid3</position>
+		<position>grid4</position>
+		<position>bottom-nav</position>
+		<position>footer1</position>
+		<position>footer2</position>
+		<position>footer3</position>
+		<position>footer-l</position>
+		<position>footer-r</position>
+		<position>footer-main</position>
+		<position>logo-logged</position>
+		<position>home-not-logged-in</position>		
+		<position>home-log-form</position>
+		<position>logged-landing-page</position>				
+		<position>404-not-found</position>				
+	</positions>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_syndication.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_syndication.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+
+				<field name="sitetitle"  type="text" default=""
+					label="JGLOBAL_TITLE"
+					description="JFIELD_ALT_PAGE_TITLE_LABEL"
+					filter="string" />
+
+				<field name="sitedescription"  type="text" default=""
+					label="JGLOBAL_DESCRIPTION"
+					description="JGLOBAL_SUBHEADING_DESC"
+					filter="string" />
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,93 @@
+<?php
+defined('_JEXEC') or die;
+function src_4360f3d0a0320c107c24b860ff3dee42($src_variables){
+$app = $mainframe = JFactory::getApplication();
+$document = $doc = JFactory::getDocument();
+$database = $db = JFactory::getDbo();
+$user = JFactory::getUser();
+$Itemid = $app->input->getInt('Itemid');
+if (is_array($src_variables)) {foreach ($src_variables as $src_key => $src_value) {${$src_key} = $src_value;}}
+///get usergroup
+$user = JFactory::getUser();
+$db     = JFactory::getDBO();
+$authorize = 0;
+
+	foreach($user->groups as $group){
+		$query  = 'SELECT title FROM #__usergroups';
+		$query .= ' WHERE id = ' . $group;
+		$db->setQuery( $query );
+		$utype = $db->loadResult();
+		if($utype=='Inner Circle'){
+				$authorize = 1;	
+		}
+	}
+
+ 
+ ; ?>
+
+
+
+
+
+
+ 
+ 
+
+
+
+
+BOOK STUDY CALLS
+
+ if($authorize==1){ ?>
+
+ 
+link 
+
+<?php } ; ?>
+
+ if($authorize!=1){ ?>
+ 
+link 
+
+<?php } ; ?>
+
+
+
+
+
+
+ 
+ 
+
+WHAT'S YOUR DEAL CALLS
+ if($authorize==1){ ?>
+ 
+link 
+
+<?php } ; ?>
+ if($authorize!=1){ ?>
+ 
+link 
+
+<?php } ; ?>
+
+
+
+
+
+ 
+ 
+
+HOT TOPIC INTERACTIVE CALLS
+ if($authorize==1){ ?>
+ 
+link 
+
+<?php } ; ?>
+ if($authorize!=1){ ?>
+ 
+link 
+
+<?php };
+;return get_defined_vars();
+;}
