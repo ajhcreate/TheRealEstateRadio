@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field name="search" type="text" label="COM_JOOMFUSE_VIEW_MAIN_SEARCHFILTER_TITLE"	description="COM_JOOMFUSE_VIEW_MAIN_SEARCHFILTER_DESCRIPTION" hint="COM_JOOMFUSE_VIEW_MAIN_SEARCHFILTER_HINT"	/>
+		<field name="associated" type="list" label="COM_JOOMFUSE_VIEW_MAIN_ASSOCIATIONFILTER_TITLE"	description="COM_JOOMFUSE_VIEW_MAIN_ASSOCIATIONFILTER_DESCRIPTION"	onchange="this.form.submit();" default="">
+			<option value="">COM_JOOMFUSE_VIEW_MAIN_ASSOCIATIONFILTER_VALUE_DEFAULT</option>
+			<option value="0">COM_JOOMFUSE_VIEW_MAIN_ASSOCIATIONFILTER_VALUE_UNASSOCIATED</option>
+			<option value="1">COM_JOOMFUSE_VIEW_MAIN_ASSOCIATIONFILTER_VALUE_ASSOCIATED</option>
+		</field>
+	</fields>
+	<fields name="list">
+		<field name="fullordering"	type="list"	label="COM_JOOMFUSE_VIEW_MAIN_ORDERING_TITLE" onchange="this.form.submit();"	default="jusers.id DESC">
+			<option value="">JGLOBAL_SORT_BY</option>
+			<option value="joomfuseusers.ifs_id ASC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_INFUSIONSOFT_ID_ASCENDING</option>
+			<option value="joomfuseusers.ifs_id DESC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_INFUSIONSOFT_ID_DESCENDING</option>
+			<option value="jusers.id ASC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_JOOMLA_USERID_ASCENDING</option>
+			<option value="jusers.id DESC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_JOOMLA_USERID_DESCENDING</option>
+			<option value="jusers.name ASC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_JOOMLA_NAME_ASCENDING</option>
+			<option value="jusers.name DESC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_JOOMLA_NAME_DESCENDING</option>
+			<option value="jusers.email ASC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_JOOMLA_EMAIL_ASCENDING</option>
+			<option value="jusers.email DESC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_JOOMLA_EMAIL_DESCENDING</option>
+			<option value="joomfuseusers.last_update ASC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_INFUSIONSOFT_LASTUPDATED_ASCENDING</option>
+			<option value="joomfuseusers.last_update DESC">COM_JOOMFUSE_VIEW_MAIN_ORDERING_INFUSIONSOFT_LASTUPDATED_DESCENDING</option>
+		</field>
+		<field name="limit"	type="limitbox"	class="input-mini" default="25" label="COM_CONTENT_LIST_LIMIT" description="COM_CONTENT_LIST_LIMIT_DESC" onchange="this.form.submit();"	/>
+	</fields>
+</form>

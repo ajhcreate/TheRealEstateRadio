@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="subscriptionManagement" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_LABEL" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_DESCRIPTION" addfieldpath="/administrator/components/com_joomfuse/models/fields">
+		<field name="cc_alow_deactivation" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_DEACTIVATION_LABEL" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_DEACTIVATION_DESCRIPTION">
+			<option value="1">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_DEACTIVATION_YES</option>
+			<option value="0">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_DEACTIVATION_NO</option>
+		</field>
+		<field name="cc_alow_addition" type="radio" default="0" class="btn-group btn-group-yesno" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_ADDITION_LABEL" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_ADDITION_DESCRIPTION">
+			<option value="1">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_ADDITION_YES</option>
+			<option value="0">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_ALLOW_CC_ADDITION_NO</option>
+		</field>
+		<field name="merchant_id" type="text" default="1" required="true" filter="integer" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_MERCHANT_ID_LABEL" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_MERCHANT_ID_DESCRIPTION" size="3" />
+		
+		<field type="spacer" name="maps_spacer" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_DIVIDER_LABEL" />
+		<field name="subscription_maps" type="joomfuserepeatable" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_LABEL" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_DESCRIPTION">
+			<field name="subscription_id" type="joomfusesubscriptionproductlist" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_SUBSCRIPTION">
+			</field>
+			<field name="subscription_cancel_actionset" type="joomfuseactionsetlist" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_CANCEL">
+				<option value="0">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_CANCEL_DISABLED</option>
+			</field>
+			<field name="subscription_cancel_goal" type="text" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_GOAL_CANCEL" size="10" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_GOAL_CANCEL_DESCRIPTION">
+				<option>SubscriptionCancelRequested</option>
+				<option>SubscriptionCancelCompleted</option>
+				<option>InvoicePaymentRequested</option>
+				<option>InvoicePaymentCompleted</option>
+			</field>
+			
+			<field name="subscription_cancel_complete_actionset" type="joomfuseactionsetlist" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_CANCEL_COMPLETE" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_CANCEL_COMPLETE_DESCRIPTION">
+				<option value="0">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_CANCEL_COMPLETE_DISABLED</option>
+			</field>
+			<field name="subscription_cancel_complete_goal" type="text" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_GOAL_CANCEL_COMPLETE" size="10" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_GOAL_CANCEL_COMPLETE_DESCRIPTION">
+				<option>SubscriptionCancelRequested</option>
+				<option>SubscriptionCancelCompleted</option>
+				<option>InvoicePaymentRequested</option>
+				<option>InvoicePaymentCompleted</option>
+			</field>
+			
+			<field name="invoice_paid_actionset" type="joomfuseactionsetlist" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_INVOICE_ACTIONSET" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_INVOICE_ACTIONSET_DESCRIPTION">
+				<option value="0">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_INVOICE_ACTIONSET_DISABLED</option>
+			</field>
+			<field name="invoice_paid_goal" type="text" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_INVOICE_GOAL" size="10" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_INVOICE_GOAL_DESCRIPTION">
+				<option>SubscriptionInvoicePaid</option>
+				<option>InvoicePayment</option>
+			</field>
+			<field name="all_invoices_paid_actionset" type="joomfuseactionsetlist" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_ALL_INVOICES_ACTIONSET" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_ALL_INVOICES_ACTIONSET_DESCRIPTION">
+				<option value="0">COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_ALL_INVOICES_ACTIONSET_DISABLED</option>
+			</field>
+			<field name="all_invoices_paid_goal" type="text" label="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_ALL_INVOICES_GOAL" size="10" description="COM_JFPORTAL_CONFIG_SUBSCRIPTIONS_MANAGEMENT_SUBSCRIPTIONS_MAP_ALL_INVOICES_GOAL_DESCRIPTION">
+				<option>SubscriptionInvoicePaid</option>
+				<option>InvoicePayment</option>
+			</field>
+		</field> 
+		
+	</fieldset>
+</config>

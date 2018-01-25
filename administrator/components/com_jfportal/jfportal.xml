@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+
+	<name>JF Portal</name>
+	
+	<creationDate>August 11, 2017</creationDate>
+	<author>Georgios Ntampitzias &amp; the JoomFuse team </author>
+	<authorEmail>zacaw@zacaw.com</authorEmail>
+	<authorUrl>www.joomfuse.com</authorUrl>
+	<copyright>Copyright Zacaw Enterprises Inc. All rights reserved.</copyright>
+	<license>GNU General Public License v3; see LICENSE.txt</license>
+	<version>1.1.225</version>
+	<description>Infusionsoft Portal component</description>
+	<scriptfile>com_jfportal_scriptfile.php</scriptfile>
+	
+	<install>
+	</install>
+	
+	<uninstall>
+	</uninstall>
+
+	<files folder="site">
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>jfportal.php</filename>
+		<folder>views</folder>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+	</files>
+
+	<administration>
+		<menu>COM_JFPORTAL</menu>
+		<files folder="admin">
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>jfportal.php</filename>
+			<folder>language</folder>
+			<folder>views</folder>
+		</files>
+	</administration>
+
+</extension>
+

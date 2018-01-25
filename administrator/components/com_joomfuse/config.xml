@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="connection_info" label="COM_JOOMFUSE_CONFIG_CONNECTION_INFO_LABEL" description="COM_JOOMFUSE_CONFIG_CONNECTION_INFO_DESC"
+		addfieldpath="/administrator/components/com_joomfuse/models/fields">
+		<field name="post_target" type="joomfuseposttarget" description="this is your target" />
+		<field name="app_name" type="text" default="" label="COM_JOOMFUSE_CONFIG_CONNECTION_INFO_APPNAME_LABEL" description="COM_JOOMFUSE_CONFIG_CONNECTION_INFO_APPNAME_DESCRIPTION" size="15" />
+		<field name="api_key" type="text" default="" label="COM_JOOMFUSE_CONFIG_CONNECTION_INFO_API_KEY_LABEL" description="COM_JOOMFUSE_CONFIG_CONNECTION_INFO_API_KEY_DESCRIPTION" size="40" />
+	</fieldset>
+
+	<fieldset name="usergrouptags" label="COM_JOOMFUSE_CONFIG_USERGROUP_TAGS_LABEL" description="COM_JOOMFUSE_CONFIG_USERGROUP_TAGS_DESC">
+		<field name="tag_group_associations" type="joomfuserepeatable" label="Tag/Group Association" description="select a tag/group association">
+			<field name="usergroup" type="sql" default="0" query="SELECT id, title FROM #__usergroups" key_field="id" value_field="title" label="Assign usergroup" description="select a usergroup"/>
+			<field name="tag" type="joomfusetaglist" default="0" label="When the following tag is set" description="Select a tag" >
+				<option value="0">-- Select One --</option>
+			</field>
+			<field name="suspend_tag" type="joomfusetaglist" default="0" label="Unless the following tag is set (suspend-tag)" description="Select a suspension tag" >
+				<option value="0">-- None --</option>
+			</field>
+		</field>
+	</fieldset>
+	
+	<fieldset name="fieldmappings" label="COM_JOOMFUSE_CONFIG_FIELD_MAPS_LABEL" description="COM_JOOMFUSE_CONFIG_FIELD_MAPS_DESCRIPTION">
+		<field name="field_associations" type="joomfuserepeatable" label="Fields association">
+				<field name="ifsField" type="joomfuseifsfield" label="Infusionsoft Contact Field">
+					<group label="General">
+						<option value="FirstName" class="&quot; data-ifsfieldtype=&quot;15">First Name</option>
+						<option value="LastName" class="&quot; data-ifsfieldtype=&quot;15">Last Name</option>
+						<option value="Company" class="&quot; data-ifsfieldtype=&quot;15">Company</option>
+						<option value="JobTitle" class="&quot; data-ifsfieldtype=&quot;15">Job Title</option>
+						<option value="Leadsource" class="&quot; data-ifsfieldtype=&quot;15">Leadsource (string)</option>
+						<option value="StreetAddress1" class="&quot; data-ifsfieldtype=&quot;15">Billing Street Address 1</option>
+						<option value="StreetAddress2" class="&quot; data-ifsfieldtype=&quot;15">Billing Street Address 2</option>
+						<option value="City" class="&quot; data-ifsfieldtype=&quot;15">Billing City</option>
+						<option value="State" class="&quot; data-ifsfieldtype=&quot;15">Billing State</option>
+						<option value="PostalCode" class="&quot; data-ifsfieldtype=&quot;15">Billing PostalCode</option>
+						<option value="ZipFour1" class="&quot; data-ifsfieldtype=&quot;15">Billing Zip Four</option>
+						<!-- WE WILL HAVE ISSUES WITH COUNTRY AS IT IS A SELECT IN THE IFS UI. SAME FOR PHONE TYPES -->
+						<option value="Country" class="&quot; data-ifsfieldtype=&quot;15">Billing Country</option>
+						<option value="Phone1Type" class="&quot; data-ifsfieldtype=&quot;15">Phone 1 Type</option>
+						<option value="Phone1Ext" class="&quot; data-ifsfieldtype=&quot;15">Phone 1 Ext</option>
+						<option value="Phone1" class="&quot; data-ifsfieldtype=&quot;15">Phone 1</option>
+						<option value="Phone2Type" class="&quot; data-ifsfieldtype=&quot;15">Phone 2 Type</option>
+						<option value="Phone2Ext" class="&quot; data-ifsfieldtype=&quot;15">Phone 2 Ext</option>
+						<option value="Phone2" class="&quot; data-ifsfieldtype=&quot;15">Phone 2</option>
+						<option value="Fax1Type" class="&quot; data-ifsfieldtype=&quot;15">Fax 1 Type</option>
+						<option value="Fax1" class="&quot; data-ifsfieldtype=&quot;15">Fax 1</option>
+						<option value="Email" class="&quot; data-ifsfieldtype=&quot;19">Email</option>
+						<option value="Website" class="&quot; data-ifsfieldtype=&quot;18">Website</option>
+					</group>
+					<group label="Address">
+						<option value="Address2Street1" class="&quot; data-ifsfieldtype=&quot;15">Shipping Street Address 1</option>
+						<option value="Address2Street2" class="&quot; data-ifsfieldtype=&quot;15">Shipping Street Address 2</option>
+						<option value="City2" class="&quot; data-ifsfieldtype=&quot;15">Shipping City</option>
+						<option value="State2" class="&quot; data-ifsfieldtype=&quot;15">Shipping State</option>
+						<option value="PostalCode2" class="&quot; data-ifsfieldtype=&quot;15">Shipping PostalCode</option>
+						<option value="ZipFour2" class="&quot; data-ifsfieldtype=&quot;15">Shipping Zip Four</option>
+						<option value="Country2" class="&quot; data-ifsfieldtype=&quot;15">Shipping Country</option>
+						<option value="Address3Street1" class="&quot; data-ifsfieldtype=&quot;15">Optional Street Address 1</option>
+						<option value="Address3Street2" class="&quot; data-ifsfieldtype=&quot;15">Optiona Street Address 2</option>
+						<option value="City3" class="&quot; data-ifsfieldtype=&quot;15">Optiona City</option>
+						<option value="State3" class="&quot; data-ifsfieldtype=&quot;15">Optiona State</option>
+						<option value="PostalCode3" class="&quot; data-ifsfieldtype=&quot;15">Optiona PostalCode</option>
+						<option value="ZipFour3" class="&quot; data-ifsfieldtype=&quot;15">Optiona Zip Four</option>
+						<option value="Country3" class="&quot; data-ifsfieldtype=&quot;15">Optiona Country</option>
+					</group>
+					<group label="Additional Info">
+						<option value="AssistantName" class="&quot; data-ifsfieldtype=&quot;15">Assistant Name</option>
+						<option value="AssistantPhone" class="&quot; data-ifsfieldtype=&quot;15">Assistant Phone</option>
+						<option value="Birthday" class="&quot; data-ifsfieldtype=&quot;13">Birthday</option>
+						<option value="SpouseName" class="&quot; data-ifsfieldtype=&quot;15">Spouse Name</option>
+						<option value="Anniversary" class="&quot; data-ifsfieldtype=&quot;13">Anniversary</option>
+						<option value="Title" class="&quot; data-ifsfieldtype=&quot;15">Title</option>
+						<option value="Suffix" class="&quot; data-ifsfieldtype=&quot;18">Suffix</option>
+						<option value="MiddleName" class="&quot; data-ifsfieldtype=&quot;15">Middle Name</option>
+						<option value="Nickname" class="&quot; data-ifsfieldtype=&quot;15">Nickname</option>
+						<option value="ReferralCode" class="&quot; data-ifsfieldtype=&quot;15">Referral Code</option>
+						<option value="Phone3Type" class="&quot; data-ifsfieldtype=&quot;15">Phone 3 Type</option>
+						<option value="Phone3Ext" class="&quot; data-ifsfieldtype=&quot;15">Phone 3 Ext</option>
+						<option value="Phone3" class="&quot; data-ifsfieldtype=&quot;15">Phone 3</option>
+						<option value="Phone4Type" class="&quot; data-ifsfieldtype=&quot;15">Phone 4 Type</option>
+						<option value="Phone4Ext" class="&quot; data-ifsfieldtype=&quot;15">Phone 4 Ext</option>
+						<option value="Phone4" class="&quot; data-ifsfieldtype=&quot;15">Phone 4</option>
+						<option value="EmailAddress2" class="&quot; data-ifsfieldtype=&quot;19">Email Address 2</option>
+						<option value="EmailAddress3" class="&quot; data-ifsfieldtype=&quot;19">Email Address 3</option>
+						<option value="Username" class="&quot; data-ifsfieldtype=&quot;15">Username</option>
+						<option value="Password" class="&quot; data-ifsfieldtype=&quot;15">Password</option>
+					</group>
+					<group label="Person Notes">
+						<option value="ContactNotes" class="ifs_fieldtype_16">Person Notes</option>
+					</group>
+				</field>
+			
+				<field name="joomlaField" type="joomfuseprofilefield" default="" label="Joomla field" description="Select the Joomla field that will share information with the following Infusionsoft Contact field" query="SELECT id, name FROM #__community_fields WHERE published = 1 AND fieldcode != '' ORDER BY ordering ASC" key_field="id" value_field="name">
+					<group label="Vanilla Joomla">
+						<option value="username" class="ifs_fieldtype_15">Username</option>
+						<option value="password" class="ifs_fieldtype_15">Password</option>
+					</group>
+				</field>
+				
+				<field name="ifsFieldType" type="joomfuseisfieldtype" default="15" label=""></field>
+				
+			</field>
+			
+	</fieldset>
+	
+	<fieldset name="http_posts" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_LABEL" description="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_DESCRIPTION">
+		<field name="newPostUserTag" type="joomfusetaglist" default="0" label="COM_JOOMFUSE_CONFIG_USERUPDATE_NEW_POST_USER_LABEL" description="COM_JOOMFUSE_CONFIG_USERUPDATE_NEW_POST_USER_DESCRIPTION">
+			<option value="0">-- None --</option>
+		</field>
+		<field name="default_usergroup" type="usergroup" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_DEFAULT_USERGROUP_LABEL" description="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_DEFAULT_USERGROUP_DESCRIPTION" default="2"/>
+		<field name="allowNewUsers" type="radio"  class="btn-group btn-group-yesno" default="1" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ALLOW_NEW_USERS_LABEL" description="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ALLOW_NEW_USERS_DESCRIPTION">
+  			<option value="1">COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ALLOW_NEW_USERS_YES</option>
+  			<option value="0">COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ALLOW_NEW_USERS_NO</option>
+		</field>
+		<field name="allowNewUsersOnTag" type="joomfusetaglist" default="" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ONLY_ON_TAG_LABEL" description="COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ONLY_ON_TAG_DESCRIPTION" >
+			<option value="0">-- None --</option>
+		</field>
+		<field name="writebackChangedCredentials" type="radio"  class="btn-group btn-group-yesno" default="0" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_WRITEBACK_CREDENTIALS_LABEL" description="COM_JOOMFUSE_CONFIG_HTTPPOSTS_WRITEBACK_CREDENTIALS_DESCRIPTION">
+			<option value="1">COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ONLY_ON_TAG_YES</option>
+			<option value="0">COM_JOOMFUSE_CONFIG_HTTPPOSTS_CREATE_ONLY_ON_TAG_NO</option>
+		</field>
+		
+		<field type="spacer" name="emails_spacer_1" hr="true"/>
+		<field type="spacer" name="emails_spacer_2" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_EMAILS_SPACER" />
+		<field name="newUserEmailsAllowed" type="radio"  class="btn-group btn-group-yesno" default="1" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_NEW_USER_EMAILS_ALLOWED_LABEL" description="COM_JOOMFUSE_CONFIG_HTTPPOSTS_NEW_USER_EMAILS_ALLOWED_DESCRIPTION">
+			<option value="1">COM_JOOMFUSE_CONFIG_HTTPPOSTS_NEW_USER_EMAILS_ALLOWED_YES</option>
+			<option value="0">COM_JOOMFUSE_CONFIG_HTTPPOSTS_NEW_USER_EMAILS_ALLOWED_NO</option>
+		</field>
+		<field name="overridePostParamsEmailsAllowed" type="radio" class="btn-group btn-group-yesno" default="1" label="COM_JOOMFUSE_CONFIG_HTTPPOSTS_OVERRIDE_POST_EMAILS_ALLOWED_LABEL" description="COM_JOOMFUSE_CONFIG_HTTPPOSTS_OVERRIDE_POST_EMAILS_ALLOWED_DESCRIPTION">
+			<option value="1">COM_JOOMFUSE_CONFIG_HTTPPOSTS_NEW_USER_EMAILS_ALLOWED_YES</option>
+			<option value="0">COM_JOOMFUSE_CONFIG_HTTPPOSTS_NEW_USER_EMAILS_ALLOWED_NO</option>
+		</field>
+		
+	</fieldset>
+	
+	<fieldset name="userupdate" label="COM_JOOMFUSE_CONFIG_USERUPDATE_LABEL" description="COM_JOOMFUSE_CONFIG_USERUPDATE_DESCRIPTION">
+		<field name="newUserTag" type="joomfusetaglist" default="0" label="COM_JOOMFUSE_CONFIG_USERUPDATE_NEW_USER_LABEL" description="COM_JOOMFUSE_CONFIG_USERUPDATE_NEW_USER_DESCRIPTION">
+			<option value="0">COM_JOOMFUSE_CONFIG_USERUPDATE_NEW_USER_DISABLED</option>
+		</field>
+		<field name="newUserOptIn" type="radio" default="1" class="btn-group btn-group-yesno" label="COM_JOOMFUSE_CONFIG_USERUPDATE_OPTIN_LABEL" description="COM_JOOMFUSE_CONFIG_USERUPDATE_OPTIN_DESCRIPTION">
+			<option value="1">COM_JOOMFUSE_CONFIG_USERUPDATE_OPTIN_YES</option>
+			<option value="0">COM_JOOMFUSE_CONFIG_USERUPDATE_OPTIN_NO</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="advanced" label="COM_JOOMFUSE_CONFIG_ADVANCED_LABEL" description="COM_JOOMFUSE_CONFIG_ADVANCED_DESCRIPTION">
+		<field name="successHttppostContactTag" type="joomfusetaglist" default="" label="COM_JOOMFUSE_CONFIG_ADVANCED_SUCCESS_POST_CONTACT_TAG_LABEL" description="COM_JOOMFUSE_CONFIG_ADVANCED_SUCCESS_POST_CONTACT_TAG_DESCRIPTION" size="4" >
+			<option value="0">COM_JOOMFUSE_CONFIG_ADVANCED_SUCCESS_POST_CONTACT_TAG_DISABLED</option>
+		</field>
+		<field name="successHttppostGoal" type="text" label="COM_JOOMFUSE_CONFIG_ADVANCED_SUCCESS_POST_CONTACT_GOAL" size="10" description="COM_JOOMFUSE_CONFIG_ADVANCED_SUCCESS_POST_CONTACT_GOAL_DESCRIPTION">
+				<option>HttpPostSuccess</option>
+			</field>
+		<field name="failHttppostContactTag" type="joomfusetaglist" default="" label="COM_JOOMFUSE_CONFIG_ADVANCED_FAIL_POST_CONTACT_TAG_LABEL" description="COM_JOOMFUSE_CONFIG_ADVANCED_FAIL_POST_CONTACT_TAG_DESCRIPTION" size="4" >
+			<option value="0">COM_JOOMFUSE_CONFIG_ADVANCED_FAIL_POST_CONTACT_TAG_DISABLED</option>
+		</field>
+		<field name="failHttppostGoal" type="text" label="COM_JOOMFUSE_CONFIG_ADVANCED_FAIL_POST_CONTACT_GOAL" size="10" description="COM_JOOMFUSE_CONFIG_ADVANCED_FAIL_POST_CONTACT_GOAL_DESCRIPTION">
+				<option>HttpPostSuccess</option>
+			</field>
+		<field name="alwaysCheckCron" type="radio"  class="btn-group btn-group-yesno" default="1" label="COM_JOOMFUSE_CONFIG_ADVANCED_ALWAYS_CHECK_CRON" description="COM_JOOMFUSE_CONFIG_ADVANCED_ALWAYS_CHECK_CRON_DESCRIPTION">
+			<option value="1">COM_JOOMFUSE_CONFIG_ADVANCED_ALWAYS_CHECK_CRON_YES</option>
+			<option value="0">COM_JOOMFUSE_CONFIG_ADVANCED_ALWAYS_CHECK_CRON_NO</option>
+		</field>
+		<field name="numCronChecks" type="text" default="3" label="COM_JOOMFUSE_CONFIG_ADVANCED_NUM_CHECK_CRON" description="COM_JOOMFUSE_CONFIG_ADVANCED_NUM_CHECK_CRON_DESCRIPTION" filter="integer" />
+	</fieldset>
+	
+	<fieldset name="debugInfo" label="Debugging" description="These are debugging options. Do not modify if you are not sure of their purpose">
+		<field name="loggingEnabled" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable JLog logging" description="Enabling this will add debugging information in your /log/com_joomfuse.txt This file will generally be accessible to anyone that knows the correct URL">
+  			<option value="0">Disabled</option>
+  			<option value="1">Enabled</option>
+		</field>
+	</fieldset>
+</config>

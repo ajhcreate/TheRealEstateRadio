@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<extension type="package" version="1.6" method="upgrade">
+ 	<name>JoomFuse Essentials Package</name>
+ 	<author>Georgios Ntampitzias &amp; The JoomFuse Team</author>
+ 	<creationDate>August 11, 2017</creationDate>
+ 	<copyright>Copyright Zacaw Enterprises Inc. All rights reserved.</copyright>
+	<license>GNU General Public License v3; see LICENSE.txt</license>
+ 	<packagename>joomfuse</packagename>
+ 	<version>2.1.225</version>
+ 	<url>http://www.joomfuse.com/</url>
+ 	<description>JoomFuse Package containing all the JoomFuse essentials</description>
+ 	<files folder="packages">
+   		<file type="component" id="com_joomfuse" >com_joomfuse.zip</file>
+   		<file type="plugin" id="joomla" group="joomfuse" client="site">plg_joomfuse_joomla.zip</file>
+   		<file type="plugin" id="joomfuse" group="system" client="site">plg_system_joomfuse.zip</file>
+   		<file type="plugin" id="joomfuse" group="user" client="site">plg_user_joomfuse.zip</file>
+   		<file type="plugin" id="joomfuse" group="editors-xtd" client="site">plg_editors-xtd_joomfuse.zip</file>
+   		<file type="module" id="mod_joomfusetrigger" client="site">mod_joomfusetrigger.zip</file>
+ 	</files>
+ </extension>
